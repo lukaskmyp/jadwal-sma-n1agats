@@ -1,0 +1,756 @@
+/* ===================================================
+   MEMBUAT SCROLL MENJADI HALUS SAAT PINDAH SECTION
+=================================================== */
+html{
+    scroll-behavior: smooth;
+}
+
+/* ===================================================
+   NAVBAR
+=================================================== */
+
+.navbar{
+
+    width: 100%; /* Lebar navbar penuh */
+
+    height: 80px; /* Tinggi navbar */
+
+    background: linear-gradient(to right,#003366,#0055aa);
+    /* Warna gradasi navbar */
+
+    display: flex;
+    /* Membuat isi navbar sejajar horizontal */
+
+    justify-content: space-between;
+    /* Logo di kiri dan menu di kanan */
+
+    align-items: center;
+    /* Semua isi navbar berada di tengah vertikal */
+
+    padding: 0 40px;
+    /* Jarak isi navbar dari kiri dan kanan */
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    /* Memberikan bayangan pada navbar */
+
+    position: sticky;
+    /* Navbar tetap terlihat saat discroll */
+
+    top: 0;
+    /* Posisi menempel di atas */
+
+}
+
+/* ===================================================
+   BAGIAN LOGO
+=================================================== */
+
+.logo{
+
+    display: flex;
+    /* Membuat logo dan tulisan sejajar */
+
+    align-items: center;
+    /* Membuat logo dan tulisan sejajar tengah */
+
+    gap: 20px;
+    /* Jarak antara logo dan tulisan */
+
+    margin-top: 3px;
+
+}
+
+/* ===================================================
+   GAMBAR LOGO
+=================================================== */
+
+.logo img{
+
+    width: 50px;
+    /* Lebar logo */
+
+    height: 50px;
+    /* Tinggi logo */
+
+    border-radius: 50%;
+    /* Membuat gambar menjadi bulat */
+
+    object-fit: cover;
+    /* Membuat gambar tetap rapi */
+
+}
+
+/* ===================================================
+   TULISAN NAMA SEKOLAH
+=================================================== */
+
+.logo h2{
+
+    color: white;
+    /* Warna tulisan putih */
+
+    font-size: 24px;
+    /* Ukuran tulisan */
+
+    font-weight: bold;
+    /* Membuat tulisan tebal */
+    
+    margin-top: 15px;
+
+}
+
+/* ===================================================
+   MENU NAVBAR LAPTOP
+=================================================== */
+
+.menu{
+
+    display: flex ;
+    /* Membuat menu sejajar horizontal */
+    gap: 20px;
+    /* Jarak antar menu */
+
+}
+
+/* ===================================================
+   CHECKBOX DISEMBUNYIKAN
+=================================================== */
+
+#check{
+
+    display: none;
+    /* Menyembunyikan checkbox asli */
+
+}
+
+/* ===================================================
+   TOMBOL MENU 3 GARIS
+=================================================== */
+
+.menu-toggle{
+
+    display: none;
+    /* Tombol tidak muncul di laptop */
+
+    font-size: 25px;
+    /* Ukuran icon ☰ */
+
+    color: white;
+    /* Warna icon putih */
+
+    cursor: pointer;
+    /* Cursor berubah menjadi tangan */
+
+}
+
+/* ===================================================
+   RESPONSIVE UNTUK HP
+=================================================== */
+
+@media(max-width:768px){
+
+    /* ===============================================
+       TOMBOL ☰ MUNCUL SAAT DI HP
+    =============================================== */
+
+    .menu-toggle{
+
+        display: block;
+        /* Menampilkan tombol 3 garis */
+         border: 2px solid white;
+        /* Garis kotak */
+        border-radius: 10px;
+
+
+    }
+
+    /* ===============================================
+       MENU NAVBAR SAAT MODE HP
+    =============================================== */
+
+    .menu{
+
+        display: none;
+        /* Menu disembunyikan terlebih dahulu */
+
+        flex-direction: column;
+        /* Menu ditampilkan ke bawah */
+
+        position: absolute;
+        /* Posisi menu bebas */
+
+        top: 80px;
+        /* Jarak dari atas sesuai tinggi navbar */
+
+        background: rgba(110, 102, 102, 0.772);
+        /* Warna background menu */
+
+        width: 125px;
+        /* Lebar menu */
+
+        padding: 15px;
+        /* Jarak isi menu */
+
+        gap: -45;
+        /* Jarak antar menu */
+
+
+        transition: 0.4s;
+        /* Animasi geser */
+
+    }
+
+    /* ===============================================
+       SAAT TOMBOL ☰ DIKLIK
+    =============================================== */
+
+    #check:checked ~ .menu{
+
+        display: flex;
+        /* Menu muncul */
+
+    }
+
+    /* ===============================================
+       LINK MENU MODE HP
+    =============================================== */
+
+    .menu a{
+
+        padding: 1px;
+        /* Jarak dalam menu */
+        height: 1px;
+
+    }
+
+}
+
+/* ===================================================
+   LINK MENU
+=================================================== */
+
+.menu a{
+
+    color: white;
+    /* Warna tulisan menu */
+
+    text-decoration: none;
+    /* Menghilangkan garis bawah */
+
+    font-size: 17px;
+    /* Ukuran tulisan */
+
+    transition: 0.3s;
+    /* Efek animasi halus */
+    margin-bottom: 53px;
+
+}
+
+/* ===================================================
+   EFEK HOVER MENU
+=================================================== */
+
+.menu a:hover{
+
+    color: yellow;
+    /* Warna berubah menjadi kuning */
+
+    transform: scale(1.1);
+    /* Menu sedikit membesar */
+
+}
+
+/* ===================================================
+   RESET CSS
+=================================================== */
+
+*{
+
+    margin: 0;
+    /* Menghilangkan jarak luar default */
+
+    padding: 0;
+    /* Menghilangkan jarak dalam default */
+
+    box-sizing: border-box;
+    /* Ukuran elemen tetap stabil */
+
+}
+
+/* ===================================================
+   BODY WEBSITE
+=================================================== */
+
+body{
+
+    font-family: Arial;
+    /* Jenis tulisan */
+
+    background: linear-gradient(to right, #000428, #004e92)
+} /* Warna background halaman *
+
+
+/* ===================================================
+   LINK PADA NAVBAR
+=================================================== */
+
+nav a{
+
+    color: white;
+    /* Warna tulisan */
+
+    text-decoration: none;
+    /* Menghilangkan garis bawah */
+
+    margin: 20px;
+    /* Jarak antar menu */
+
+    font-weight: bold;
+    /* Tulisan tebal */
+
+    padding-top: 30px;
+    /* Jarak atas */
+
+}
+
+/* =========================
+   BAGIAN HOME / HEADER
+========================= */
+.home{
+    
+    width: 100%; /* Lebar section penuh */
+    height: 100vh; /* Tinggi section memenuhi layar */
+    
+    display: flex; /* Membuat isi bisa sejajar */
+    justify-content: center; /* Posisi isi di tengah horizontal */
+    align-items: center; /* Posisi isi di tengah vertikal */
+}
+
+
+/* =========================
+   OVERLAY / ISI HOME
+========================= */
+.overlay{
+    
+    display: flex; /* Membuat gambar dan teks sejajar */
+    align-items: center; /* Membuat posisi sejajar tengah */
+    justify-content: center;
+
+    flex-direction: column;/* Membuat isi menjadi ke bawah: foto di atas, tulisan di bawah */
+
+    gap: 30px; /* Jarak antara foto dan tulisan */
+    
+    color: white; /* Warna teks putih */
+    
+    padding: -80px; /* Jarak isi dengan pinggir */
+    
+    border-radius: 20px; /* Membuat sudut melengkung */
+}
+
+
+/* =========================
+   FOTO LOGO SEKOLAH
+========================= */
+.fp{
+    
+    width: 150px; /* Lebar foto */
+    height: 150px; /* Tinggi foto */
+    
+    border-radius: 50%; 
+    /* Membuat foto menjadi lingkaran */
+    
+    object-fit: cover; 
+    /* Agar foto tidak gepeng */
+    
+    border: 5px solid white; 
+    /* Garis putih di foto */
+}
+
+
+/* =========================
+   BAGIAN TEKS
+========================= */
+.overlay-text{
+    
+    display: flex;
+    flex-direction: column;
+    /* Membuat tulisan tersusun ke bawah */
+}
+
+
+/* =========================
+   JUDUL
+========================= */
+.overlay h1{
+    
+    font-size: 17px; /* Ukuran judul */
+    
+    
+    margin-bottom: 10px; 
+    /* Jarak bawah judul */
+    
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   PARAGRAF / KETERANGAN
+========================= */
+.overlay p{
+    
+    font-size: 18px; /* Ukuran teks */
+    
+    line-height: 30px; 
+    /* Jarak antar baris */
+
+    margin: 0;
+    
+    font-family: Arial, sans-serif;
+
+      width: 500px; /* Membuat lebar paragraf lebih kecil sehingga tulisan turun ke bawah */
+
+    text-align: center; /* Membuat tulisan rata tengah */
+}
+
+/* ===================================================
+   SEMUA SECTION
+=================================================== */
+
+section{
+
+    padding: 60px 20px;
+    /* Jarak dalam section */
+
+}
+
+/* ===================================================
+   CONTAINER
+=================================================== */
+
+.container{
+
+    width: 150%;
+    /* Lebar container */
+
+    max-height: 900px;
+
+    max-width: 700px;
+    /* Lebar maksimal */
+
+    margin: auto;
+    /* Posisi di tengah */
+
+    background: #fafafa;
+    /* Warna background */
+
+    padding: 100px;
+    /* Jarak isi */
+
+}
+
+/* ===================================================
+   JUDUL
+=================================================== */
+
+h2{
+
+    text-align: center;
+    /* Tulisan di tengah */
+
+    margin-bottom: 20px;
+    /* Jarak bawah */
+
+    color: #007bff;
+    /* Warna biru */
+
+    font-size: 32px;
+    /* Ukuran tulisan */
+
+}
+
+h3{
+
+    margin-bottom: 15px;
+    /* Jarak bawah */
+
+    color: #007bff;
+    /* Warna biru */
+
+}
+
+/* ===================================================
+   TABEL
+=================================================== */
+
+table{
+
+    width: 100%;
+    /* Lebar penu h */
+
+    border-collapse: collapse;
+    /* Menggabungkan garis tabel */
+
+    margin-top: 15px;
+    /* Jarak atas */
+
+    overflow: hidden;
+    /* Menyembunyikan isi keluar */
+
+    border-radius: 10px;
+    /* Sudut tabel melengkung */
+
+}
+
+/* ===================================================
+   KEPALA TABEL
+=================================================== */
+
+th{
+
+    background: linear-gradient(to right, #003366, #0055aa);
+    /* Warna background */
+
+    color: white;
+    /* Warna tulisan */
+
+    padding: 15px;
+    /* Jarak isi */
+
+    text-align: center;
+    /* Tulisan di tengah */
+
+    font-size: 16px;
+    /* Ukuran tulisan */
+
+}
+
+/* ===================================================
+   ISI TABEL
+=================================================== */
+
+td{
+
+    padding: 14px;
+    /* Jarak isi */
+
+    border: 1px solid #ddd;
+    /* Garis tabel */
+
+    text-align: center;
+    /* Tulisan di tengah */
+
+    background: transparent;
+    /* Warna background */
+
+    color: black;
+
+}
+
+/* ===================================================
+   WARNA SELANG-SELING TABEL
+=================================================== */
+
+tr:nth-child(even) td{
+
+    background: transparent;
+    /* Warna abu muda */
+
+}
+
+/* ===================================================
+   EFEK HOVER TABEL
+=================================================== */
+
+tr:hover td{
+
+    background: #eef5ff;
+    /* Warna berubah saat disentuh */
+
+    transition: 0.3s;
+    /* Animasi halus */
+
+}
+
+/* ===================================================
+   BUTTON
+=================================================== */
+
+.btn{
+
+    padding: 10px 18px;
+    /* Jarak isi tombol */
+
+    border: none;
+    /* Menghilangkan garis */
+
+    background: #28a745;
+    /* Warna hijau */
+
+    color: white;
+    /* Warna tulisan */
+
+    border-radius: 8px;
+    /* Sudut melengkung */
+
+    cursor: pointer;
+    /* Cursor berubah menjadi tangan */
+
+    font-size: 14px;
+    /* Ukuran tulisan */
+
+    transition: 0.3s;
+    /* Animasi halus */
+
+}
+
+/* ===================================================
+   HOVER BUTTON
+=================================================== */
+
+.btn:hover{
+
+    background: #1f7d35;
+    /* Warna lebih gelap */
+
+    transform: scale(1.05);
+    /* Tombol sedikit membesar */
+
+}
+
+/* ===================================================
+   BOX JADWAL
+=================================================== */
+
+.jadwal-box{
+
+    display: none;
+    /* Awalnya disembunyikan */
+
+    margin-top: 30px;
+    /* Jarak atas */
+
+    padding: 20px;
+    /* Jarak isi */
+
+    padding-top: 55px;
+    /* Jarak atas isi */
+
+    background: #fafafa;
+    /* Warna background */
+
+    border-radius: 12px;
+    /* Sudut melengkung */
+
+    border: 1px solid #ddd;
+    /* Garis pinggir */
+
+    animation: muncul 0.4s ease;
+    /* Animasi muncul */
+
+}
+
+/* ===================================================
+   ANIMASI MUNCUL
+=================================================== */
+
+@keyframes muncul{
+
+    from{
+        opacity: 0;
+        /* Transparan */
+        transform: translateY(20px);
+        /* Geser dari bawah */
+    }
+
+    to{
+        opacity: 1;
+        /* Muncul penuh */
+        transform: translateY(0);
+        /* Kembali normal */
+    }
+
+}
+
+/* ===================================================
+   RESPONSIVE MOBILE
+=================================================== */
+
+@media(max-width:768px){
+
+    .container{
+
+        width: 100%;
+        /* Container penuh */
+
+        padding: 15px;
+        /* Jarak isi lebih kecil */
+
+    }
+
+    h2{
+
+        font-size: 24px;
+        /* Judul lebih kecil */
+
+    }
+
+    table{
+
+        font-size: 14px;
+        /* Tulisan tabel lebih kecil */
+
+    }
+
+    th,
+    td{
+
+        padding: 10px;
+        /* Jarak isi tabel */
+
+    }
+
+    .btn{
+
+        width: 100%;
+        /* Tombol full */
+
+    }
+
+}
+
+/* ===================================================
+   SECTION KONTAK
+=================================================== */
+
+.kontak {
+    width: 100%;
+    height: 100px;
+    padding-bottom: 140px;
+    
+
+}
+
+#kontak h2 {
+    color: white;
+    padding-top: 50px;
+    
+}
+
+#kontak a {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 15px;
+    font-size: 35px;
+    text-decoration: none;
+}
+#kontak p{
+    text-align: center;
+    margin-top: 15px;
+    /* Jarak atas */
+
+    font-size: 18px;
+    /* Ukuran tulisan */
+
+}

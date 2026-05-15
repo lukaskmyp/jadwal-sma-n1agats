@@ -1,0 +1,433 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Jadwal Sekolah SMA</title>
+
+  <link rel="stylesheet" href="baru/style/dua.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- Navbar -->
+ <nav class="navbar">
+
+    <!-- Logo dan nama sekolah -->
+    <div class="logo">
+
+      <!-- Logo sekolah -->
+      <img src="baru/gambar/logosma.jpeg" alt="Logo">
+
+      <!-- Nama sekolah -->
+      <h2>SMA Negeri 1</h2>
+
+    </div>
+
+      <!-- checkbox tersembunyi -->
+      <input type="checkbox" id="check">
+
+      <!-- tombol 3 garis -->
+       <label for="check" class="menu-toggle">
+
+        ☰
+
+    </label>
+
+    <!-- Menu navbar -->
+    <div class="menu">
+
+      <a href="#home">Home</a>
+
+      <a href="#jp">Jadwal Pelajar</a>
+
+      <a href="#je">Jadwal Ekskul</a>
+
+      <a href="#kontak">Kontak</a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- Home -->
+ <section id="home" class="home">
+
+    <div class="overlay">
+
+        <!-- Foto -->
+        <img 
+        class="rounded-circle fp"
+        src="baru/gambar/logosma.jpeg" alt="">
+
+        <!-- Tulisan -->
+        <div class="overlay-text">
+
+            <h1>Jadwal Sekolah SMA NEGERI 1 AGATS</h1>
+
+        </div>
+
+    </div>
+
+</section>
+  <!-- Jadwal -->
+   <section id="jp" class="container">
+
+    <!-- Judul -->
+    <h2>Jadwal Pelajar</h2>
+
+    <!-- Tabel daftar kelas -->
+    <table>
+
+      <!-- Kepala tabel -->
+      <tr>
+
+        <th>Kelas</th>
+
+        <th>Wali Kelas</th>
+
+        <th>Jadwal</th>
+
+      </tr>
+
+      <!-- Data kelas pertama -->
+      <tr>
+
+        <td>X IPA 1</td>
+
+        <td>Ibu Sinta</td>
+
+        <td>
+
+          <!-- Tombol lihat jadwal -->
+          <button class="btn"
+          onclick="tampilJadwal('xipa1')">
+
+            Lihat Jadwal
+
+          </button>
+
+        </td>
+
+      </tr>
+
+      <!-- Data kelas kedua -->
+      <tr>
+
+        <td>X IPA 2</td>
+
+        <td>Bapak Agus</td>
+
+        <td>
+
+          <button class="btn"
+          onclick="tampilJadwal('xipa2')">
+
+            Lihat Jadwal
+
+          </button>
+
+        </td>
+
+      </tr>
+
+      <!-- Data kelas ketiga -->
+      <tr>
+
+        <td>XI IPS 1</td>
+
+        <td>Ibu Rina</td>
+
+        <td>
+
+          <button class="btn"
+          onclick="tampilJadwal('xiips1')">
+
+            Lihat Jadwal
+
+          </button>
+
+        </td>
+
+      </tr>
+
+    </table>
+
+    <!-- ================= DETAIL JADWAL ================= -->
+
+    <!-- Jadwal kelas X IPA 1 -->
+    <div id="xipa1" class="jadwal-box">
+
+      <h3>Jadwal X IPA 1</h3>
+
+      <table>
+
+        <tr>
+
+          <th>Hari</th>
+
+          <th>Mata Pelajaran</th>
+
+          <th>Jam</th>
+
+          <th>Guru</th>
+
+        </tr>
+
+        <tr>
+
+         <td rowspan="3">Senin</td>
+          <td>Matematika</td>
+          <td>07:00 - 08:00</td>
+          <td>Bapak Agus</td>
+
+        </tr>
+
+        <tr>
+          <td>Bahasa Indonesia</td>
+          <td>10:00 - 12:00</td>
+          <td>Bapak Aldy</td>
+        </tr>
+
+        <tr>
+          <td>Bahasa Inggris</td>
+          <td>13:00 - 14:15</td>
+          <td>Bapak Amrang</td>
+        </tr>
+
+        <tr>
+
+          <td>Selasa</td>
+
+          <td>Fisika</td>
+
+          <td>08:30 - 10:00</td>
+
+          <td>Ibu Rina</td>
+
+        </tr>
+
+      </table>
+
+    </div>
+
+    <!-- Jadwal kelas X IPA 2 -->
+    <div id="xipa2" class="jadwal-box">
+
+      <h3>Jadwal X IPA 2</h3>
+
+      <table>
+
+        <tr>
+
+          <th>Hari</th>
+
+          <th>Mata Pelajaran</th>
+
+          <th>Jam</th>
+
+          <th>Guru</th>
+
+        </tr>
+
+        <tr>
+
+          <td>Rabu</td>
+
+          <td>Kimia</td>
+
+          <td>07:00 - 08:30</td>
+
+          <td>Ibu Maria</td>
+
+        </tr>
+
+        <tr>
+
+          <td>Kamis</td>
+
+          <td>Biologi</td>
+
+          <td>08:30 - 10:00</td>
+
+          <td>Bapak Yusuf</td>
+
+        </tr>
+
+      </table>
+
+    </div>
+
+    <!-- Jadwal kelas XI IPS 1 -->
+    <div id="xiips1" class="jadwal-box">
+
+      <h3>Jadwal XI IPS 1</h3>
+
+      <table>
+
+        <tr>
+
+          <th>Hari</th>
+
+          <th>Mata Pelajaran</th>
+
+          <th>Jam</th>
+
+          <th>Guru</th>
+
+        </tr>
+
+        <tr>
+
+          <td>Jumat</td>
+
+          <td>Ekonomi</td>
+
+          <td>07:00 - 08:30</td>
+
+          <td>Ibu Mira</td>
+
+        </tr>
+
+      </table>
+
+    </div>
+
+  </section>
+
+  <!-- ================= JAVASCRIPT ================= -->
+  <script>
+
+    /* Daftar id jadwal */
+    let daftarJadwal = [
+      "xipa1",
+      "xipa2",
+      "xiips1"
+    ];
+
+    /* Posisi jadwal sekarang */
+    let indexJadwal = 0;
+
+    /* Fungsi tampil jadwal */
+    function tampilJadwal(id){
+
+      /* Mengambil semua jadwal */
+      let semuaJadwal =
+      document.querySelectorAll('.jadwal-box');
+
+      /* Menyembunyikan semua jadwal */
+      semuaJadwal.forEach(function(box){
+
+        box.style.display = 'none';
+
+      });
+
+      /* Menampilkan jadwal yang dipilih */
+      document.getElementById(id)
+      .style.display = 'block';
+
+      /* Menyimpan posisi jadwal */
+      indexJadwal =
+      daftarJadwal.indexOf(id);
+
+    }
+
+    /* Fungsi tombol selanjutnya */
+    function selanjutnya(){
+
+      /* Tambah index */
+      indexJadwal++;
+
+      /* Jika lebih dari jumlah data */
+      if(indexJadwal >= daftarJadwal.length){
+
+        indexJadwal = 0;
+
+      }
+
+      /* Tampilkan jadwal */
+      tampilJadwal(
+      daftarJadwal[indexJadwal]);
+
+    }
+
+    /* Fungsi tombol sebelumnya */
+    function sebelumnya(){
+
+      /* Kurangi index */
+      indexJadwal--;
+
+      /* Jika kurang dari 0 */
+      if(indexJadwal < 0){
+
+        indexJadwal =
+        daftarJadwal.length - 1;
+
+      }
+
+      /* Tampilkan jadwal */
+      tampilJadwal(
+      daftarJadwal[indexJadwal]);
+
+    }
+
+  </script>
+  <section id="je">
+
+    <div class="container">
+
+      <h2>Jadwal Ekskur</h2>
+
+      <table>
+
+        <tr>
+          <th>Hari</th>
+          <th>Ekskul</th>
+          <th>Jam</th>
+          <th>Guru</th>
+        </tr>
+
+        <!-- Senin -->
+        <tr>
+          <td>Senin</td>
+          <td>Menari</td>
+          <td>16:00 - 17:30</td>
+          <td>Bapak Agus</td>
+        </tr>
+
+        <tr>
+          <td>Selasa</td>
+          <td>Katate</td>
+          <td>15:00 - 15:30</td>
+          <td>Ibu Sinta</td>
+        </tr>
+
+        <tr>
+          <td>Sabtu</td>
+          <td>Badmimton</td>
+          <td>15:00 - 18:00</td>
+          <td>Bapak Andi</td>
+        </tr>
+
+      </table>
+
+    </div>
+
+  </section>
+
+
+  <!-- Kontak -->
+  <section id="kontak">
+
+    <div class="kontak">
+
+      <h2>Kontak Sekolah</h2>
+      <div class= "text-center kontak">
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href=""><i class="fa-solid fa-at"></i></a>
+    </div>
+
+    </div>
+
+  </section>
+
+</body>
+</html>
